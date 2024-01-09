@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+
+.place{
+
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	
+}
+
+
+.layer{
+	background:transparent;
+	height:100%;
+	width:100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+
+.layer:hover{
+	background:rgba(226,0,0,0.7); 
+
+}
+.layer h3{
+	width: 100%;
+	font-weight: 500;
+	color:#fff ;
+	font-size: 26px;
+	bottom:0;
+	left:50%;
+	transform:translate(-50%);
+	position:absolute;
+	opacity:0;
+	transition: 0.5s;
+}
+.layer:hover h3{
+	bottom: 49%;
+	opacity: 1;
+}
+
+figure{
+	background-image: url("restaurent1.jpg")
+}
+
+
+
+
+
+
+
+	.container{
+		max-width: 1200px;
+		width: 95%;
+	}
+	.slider-wrapper{
+		position:relative; 
+	}
+	.slider-wrapper .slide-button{
+		position: absolute;
+		top: 50%;
+		height: 50px;
+		margin-left: 7%;
+		margin-right: 2px;
+		width: 50px;
+		color: #fff;
+		border:none;
+		outline: none;
+		background-color: #000;
+		font-size: 2.2rem;
+		cursor: pointer;
+		border-radius: 50%;
+		transform: translateY(-50%);
+	}
+	.slider-wrapper .slide-button:hover{
+		background-color: #444;
+
+	}
+	.slider-wrapper .slide-button#prev-slide{
+		left:-20px;
+	}
+	.slider-wrapper .slide-button#next-slide{
+		right: -20px;
+	}
+
+	.slider-wrapper .image-list{
+		display: grid;
+		grid-gap: 18px;
+		font-size: 0;
+		margin-bottom:30px; 
+		margin-left: 10%;
+		overflow-x: auto;
+		scrollbar-width:none;
+		grid-template-columns: repeat(10,1fr);
+	}
+	.slider-wrapper .image-list::-webkit-scrollbar{
+		display: none;
+
+	}
+	.slider-wrapper .image-list .image-item{
+		width: 325px;
+		height: 400px;
+		object-fit: cover;
+		border-top-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+
+	}
+	.slider-wrapper .image-list:hover .image-item{
+		background:rgba(226,0,0,0.7);
+	}
+	
+	.container .slider-scrollbar{
+		height: 24px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+	.slider-scrollbar .scrollbar-track{
+		height: 2px;
+		width: 100%;
+		position: relative;
+		border-radius: 4px;
+	}
+	.slider-scrollbar:hover .scrollbar-track{
+		height: 4px;
+	}
+
+	.slider-scrollbar .scrollbar-thumb{
+		position: absolute;
+		height: 100%;
+		width: 50%;
+		border-radius: inherit;
+		cursor: grab;
+	}
+	.slider-scrollbar .scrollbar-thumb:active{
+		cursor: grabbing;
+		height: 8px;
+		top:-2px;
+	}
+	.slider-scrollbar .scrollbar-thumb::after{
+		content: "";
+		position: absolute;
+		left:0;
+		right: 0;
+		top:-10px;
+		bottom: -10px;
+
+	}
+</style>
+<body>
+
+</body>
+<h1>ggggggggggggggggg<i class="fa fa-bars"></i><h1>
+<div class="container">
+
+			
+		<div class="slider-wrapper">
+			<button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
+			<div class="image-list">
+				
+				<div class="place">
+					<figure></figure>
+					<div class="layer">
+						<h3>KININDO</h3>
+					</div>
+				</div>
+				<div class="place">
+					<img src="restaurent2.jpg" alt="image-1" class="image-item">
+					<div class="layer">
+						<h3>CARAMA</h3>
+					</div>
+				</div>
+				<div class="place">
+					<img src="restaurent3.jpg" alt="image-1" class="image-item">
+					<div class="layer">
+						<h3>MUSAGA</h3>
+					</div>
+				</div>
+				<div class="place">
+					<img src="restaurent4.jpg" alt="image-1" class="image-item">
+					<div class="layer">
+						<h3>KINAMA</h3>
+					</div>
+				</div>
+				<div class="place">
+					<img src="restaurent5.jpg" alt="image-1" class="image-item">
+					<div class="layer">
+						<h3>KAMENGE</h3>
+				</div>
+			</div>
+			
+			
+			<button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
+
+			
+		</div>
+		<div class="slider-scrollbar">
+			<div class="scrollbar-track">
+				<div class="scrollbar-thumb"></div>
+
+
+			</div>
+			
+		</div>
+		
+	</div>
+</html>
